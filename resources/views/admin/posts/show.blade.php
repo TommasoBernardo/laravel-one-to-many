@@ -4,7 +4,7 @@
     <div class="container mt-5">
         <div class="card text-center">
             <div class="card-header">
-                {{ $post->author }}
+                {{ $post->author }}|| {{ $post->type->name }}
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{ $post->title }}</h5>
