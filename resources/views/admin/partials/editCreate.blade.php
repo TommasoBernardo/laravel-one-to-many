@@ -19,6 +19,19 @@
     <h4 class="fw-bold">
         Autore: {{ Auth::user()->name }}
     </h4>
+
+
+    <div class="mb-3">
+        <label for="post_type" class="form-label">Type</label>
+
+        <select type="text" class="form-control" id="title" name="type_id">
+            @foreach ($types as $type)
+                <option value="{{ $type->id }}">{{ $type->name }}</option>
+            @endforeach
+        </select>
+    </div>
+
+
     <div class="mb-3">
         <label for="title" class="form-label">title</label>
         <input type="text" class="form-control" id="title" placeholder="the lord of kings" name="title"
