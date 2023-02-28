@@ -10,7 +10,7 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'author', 'slug', 'title', 'date', 'content', 'image'
+        'author', 'slug', 'title', 'date', 'content', 'image', 'type_id'
     ];
 
     public function type()
