@@ -12,6 +12,11 @@ class Post extends Model
     protected $fillable = [
         'author', 'slug', 'title', 'date', 'content', 'image'
     ];
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
     /**
      * Get the route key for the model.
      *
