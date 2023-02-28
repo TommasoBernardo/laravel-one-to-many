@@ -60,7 +60,7 @@
 
     <div class="mb-3">
         <button type="submit" class="btn btn-info">
-            submit your film
+            {{ $routeAddress == 'admin.posts.update' ? 'Update film' : 'create a new film' }}
         </button>
     </div>
 </form>
