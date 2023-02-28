@@ -26,7 +26,8 @@
 
         <select type="text" class="form-control" id="title" name="type_id">
             @foreach ($types as $type)
-                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                <option value="{{ $type->id }}" {{ old('type_id', $post->type_id) == $type->id ? 'selected' : '' }}>
+                    {{ $type->name }}</option>
             @endforeach
         </select>
     </div>

@@ -18,7 +18,8 @@ class PostController extends Controller
         'title' => ['required',  'unique:posts'],
         'date' => 'required',
         'content' => 'required',
-        'image' => 'required|image'
+        'image' => 'required|image',
+        'type_id' => 'required|exists:types,id'
     ];
     /**
      * Display a listing of the resource.
@@ -96,7 +97,8 @@ class PostController extends Controller
             'title' => ['required', Rule::unique('posts')->ignore($post->id)],
             'date' => 'required',
             'content' => 'required',
-            'image' => 'image|required'
+            'image' => 'image|required',
+            'type_id' => 'required|exists:types,id'
         ]);
 
 
